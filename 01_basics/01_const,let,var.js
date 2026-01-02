@@ -8,4 +8,5 @@ accountCity="Bathinda"
 accountName="The REHAN DON"
 accountPassword="1234321"
 accountCity="ludhiana"
-console.table([accountName, accountPassword, accountCity])
+let accountState
+console.table([accountName, accountPassword, accountCity,accountState])
