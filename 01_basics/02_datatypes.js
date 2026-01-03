@@ -4,9 +4,9 @@
 
 console.log(3+3) // we can aslo do arithmetic calculations in console.log
 let name ="rehan" // string datatype
-let age =20 //integer datatype
+let age =20 // Number datatype
 let loggedIn = true // boolean datatype
-// normal integer range is till 2^53
+// normal Number range is till 2^53
 //bigint -> for even bigger numbers
 // null=> standlalone value representing empty value
 //undefined =>
