@@ -1,11 +1,11 @@
-const name = "rehan"
+const name = "rehan" //  this is a string primitive
 const repoCount = 2
 
 // console.log(name + repoCount + " Value"); -> this is the old method of adding strings and it is very outdated
 
 console.log(`Hello my name is ${name} and my repo count is ${repoCount}`); //this is the new, more readable syntax of adding strings 
 
-const gameName = new String('hitesh-hc-com') // this is how we declare strings, by this we can access the substrings within the string and do any manipulation required
+const gameName = new String('hitesh-hc-com') // its datatype is object not string | this is a string OBJECT| this is how we declare strings, by this we can access the substrings within the string and do any manipulation required
 
 // console.log(gameName[0]); -> this will access the 0th key of the string; the indexing of a string is done from 0 to n-1;
 // console.log(gameName.__proto__);
