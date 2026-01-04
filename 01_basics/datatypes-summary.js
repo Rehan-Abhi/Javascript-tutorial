@@ -35,3 +35,29 @@ const myFunction = function(){
 // datatype of symbol -> symbol 
 
 console.log(typeof anotherId);
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// types of memory->
+// stack (primitive) , heap(non-primitive) 
+// stack -> creates a copy, thus original memory location me koi change nhi hota
+// heap -> original memory location ka refernce diya jata ha, thus jo bhi change hota ha wo sab oriinal memory location me change hota ha
+
+let myYtName = "ranjana abhi"
+let anotherName = myYtName // now being stack, anotherName has got a copy of the og myYtName, so anychanges made in this anotherName will not hinder myYtName
+anotherName="reinh bah"
+console.log(anotherName); // reinh bah
+console.log(myYtName); // ranjana abhi
+
+let userOne= {
+    email: "user@google.com",
+    upi: "user@ybl"
+}
+let userTwo = userOne // now userTwo has got a refernce of original memory location, thus any change in the valure of userTwo will change the value in userOne as well
+
+userTwo.email="abc@google.com"
+console.log(userTwo.email); // abc@google.com
+console.log(userOne.email); // abc@google.com
+
+
+
