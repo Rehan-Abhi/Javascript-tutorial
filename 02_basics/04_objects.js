@@ -61,17 +61,17 @@ const course = {
     courseInstructor: "hitesh"
 }
 
-// course.courseInstructor
+// course.courseInstructor -> basic syntax to access a key of an object
 
-const {courseInstructor: instructor} = course
+const {courseInstructor: instructor} = course // destructuring of an object, very important | it unpacks properties of an object into distinct variables/ constants which are easy to access -> i.e koi key ko humne ek bahr se constant ya variable me store kra diya, ab hume baar baar object kr andar jake uss key ko access krne ki zarurat nhi ha, hum directly uss variable ko access kr sakte hain jisme wo key humne store key ha, bas ye krna ka ye ek basic syntax ha
 
 // console.log(courseInstructor);
-console.log(instructor);
+console.log(instructor);  // changed the name of the key to make it easier
 
 // {
 //     "name": "hitesh",
-//     "coursename": "js in hindi",
-//     "price": "free"
+//     "coursename": "js in hindi",    
+//     "price": "free"                -> isme sir ne json ke bare me aur api ke bare me basic baatein ki thi
 // }
 
 [
