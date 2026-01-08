@@ -14,6 +14,6 @@ console.log(null >= 0); // true  {BUT, THE EQUALITY OPERATOR i.e == DOES NOT CON
 // simmilarly, when we will do all the comparisons with undefined, everything will be false becuase undefined's number value is also undefined
 
 
-// === STRICT CHECK -> also check the datatype of the value
+// === STRICT CHECK -> also check the datatype of the value | similarly we have !==
 console.log("2" ==2)// true
 console.log("2"===2)// false
