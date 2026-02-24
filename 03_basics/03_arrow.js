@@ -13,10 +13,10 @@ const user = {
 // user.username = "sam"
 // user.welcomeMessage()
 
-// console.log(this);  -> answer:{}, but agar hum isi ko browser me jake krte to windows ke related bahut bhara hua object aata ha, thus node ka global env is an empty object whereas browser ka global env is windows ke sare elements
+// console.log(this);  -> answer:{}, but agar hum isi ko browser me jake krte, to windows ke related bahut bhara hua object aata ha, thus node ka global env is an empty object whereas browser ka global env is windows ke sare elements
 // function chai(){
 //     let username = "hitesh"
-//     console.log(this.username); // NOTE-> FUNCTION KA CONTET ALAG SA HI AATA HA, ISME HUM AISE this.username USE NHI KR SAKTE, WO HUM SIRF OBJECTS ME HI USE KR SAKTE HAIN | isme answer undefined aayega
+//     console.log(this.username); // NOTE-> FUNCTION KA CONTENT ALAG SA HI AATA HA, ISME HUM AISE this.username USE NHI KR SAKTE, WO HUM SIRF OBJECTS ME HI USE KR SAKTE HAIN | isme answer undefined aayega
 // }
 
 // chai()
@@ -32,7 +32,7 @@ const chai =  () => {     // arrow function ka syntax -> (parameters) => {expres
 }
 
 
-// chai()
+chai()
 
 // const addTwo = (num1, num2) => { 
 //     return num1 + num2

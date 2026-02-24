@@ -7,9 +7,9 @@
 console.log("2" > 1); // true
 console.log("02" > 1); //true
 
-console.log(null > 0); // false
-console.log(null == 0); // false {NOTE->THIS HAPPENS BECAUSE COMPARISON OPERATORS CONVERT ANYTHING TO NUMBER, i.e NULL TO ZERO}
-console.log(null >= 0); // true  {BUT, THE EQUALITY OPERATOR i.e == DOES NOT CONVERT NULL OR ANYTHING ELSE TO NUMBER}
+console.log(null > 0); // false {NOTE->THIS HAPPENS BECAUSE COMPARISON OPERATORS CONVERT ANYTHING TO NUMBER, i.e NULL TO ZERO}
+console.log(null == 0); // false {BUT, THE EQUALITY OPERATOR i.e == DOES NOT CONVERT NULL OR ANYTHING ELSE TO NUMBER}
+console.log(null >= 0); // true  {AND THIS HAPPENS BECAUSE THE GREATER THAN OR EQUAL TO OPERATOR CONVERTS NULL TO ZERO, AND ZERO IS EQUAL TO ZERO, SO IT RETURNS TRUE}
 
 // simmilarly, when we will do all the comparisons with undefined, everything will be false becuase undefined's number value is also undefined
 

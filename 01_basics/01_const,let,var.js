@@ -10,3 +10,6 @@ accountPassword="1234321"
 accountCity="ludhiana"
 let accountState
 console.table([accountName, accountPassword, accountCity,accountState])
+
+
+

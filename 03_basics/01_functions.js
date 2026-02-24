@@ -42,7 +42,6 @@ function loginUserMessage(username = "sam"){   // by specifying a value of usern
 // console.log(loginUserMessage("hitesh"))
 
 
-
 function calculateCartPrice(val1, val2, ...num1){     // this is used when number of input values is not known | this ... here is called rest operator which puts all the values of arguement value in an array
     return num1
 }
@@ -72,3 +71,8 @@ function returnSecondValue(getArray){
 
 // console.log(returnSecondValue(myNewArray));
 console.log(returnSecondValue([200, 400, 500, 1000])); //shows that we can directly put an array in the arguement value
+
+
+//note-> another way of declaring a function ->
+const name = function(){}
+//note-> this is same as function name(){}
