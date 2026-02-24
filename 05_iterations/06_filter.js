@@ -9,8 +9,9 @@
 // console.log(values);
 
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// NOTE -> filter ka syntax -> const vairable_name = arr_name.filter(() => (condition))
 
-// const newNums = myNums.filter( (num) => {
+// const newNums = myNums.filter( (num) => {   //NOTE -> filter returns all the values of the array which satisfy the condition
 //     return num > 4
 // } )
 
@@ -18,7 +19,7 @@ const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 // myNums.forEach( (num) => {
 //     if (num > 4) {
-//         newNums.push(num)
+//         newNums.push(num)        // this is the way to do the above same thing with the help of foreach 
 //     }
 // } )
 
