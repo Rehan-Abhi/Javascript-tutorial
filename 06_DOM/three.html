@@ -1,0 +1,29 @@
+<!-- here we have learnt how to insert an element from script into the body -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code</title>
+ </head>
+ <body style = "background-color: #212121; color: #fff">
+    
+ </body>
+ <script>
+    const div = document.createElement('div')
+    console.log(div)
+    div.className = "main" // note -> this overwrites the value of class rather than creating a class, similarly with id
+    div.id = Math.round(Math.random() * 10 + 1) // this is a way to generate unique id's from 1 to 10
+    div.setAttribute("title" , "generated title") 
+    div.style.backgroundColor = "darkgreen"
+    div.style.padding = "15px"
+
+    // div.innerText = " chai aur code" // this way, we overwrite the value of inner text rather than creating a new text node
+
+    const addText = document.createTextNode("Chai aur Code")
+    div.appendChild(addText) // this is how we first create a text node and then add it to our div by appendChild method
+
+    document.body.appendChild(div) // this is how we append our div from script to body
+
+ </script>
+ </html>
