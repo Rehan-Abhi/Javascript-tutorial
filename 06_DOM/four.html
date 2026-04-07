@@ -1,0 +1,47 @@
+<!-- in this, we have learnt how to add elements using functions, edit and remove elements in dom -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM with chai aur code</title>
+</head>
+<body style="background-color: #212121 ; color: #fff ">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName){
+        const li = document.createElement('li')
+        li.innerHTML = langName
+        const language = document.querySelector('.language')
+        language.appendChild(li)
+    }                                       // in this way, we have used innerHTML which is not the most optimised way of doing things(not very bad also), in the next function, we will see another a lil bit more optimised way of doing this same shit
+    addLanguage("python")
+    addLanguage("typescript")
+
+    function addOptiLanguage(langName){
+        const li = document.createElement('li')
+        li.append(document.createTextNode(langName))
+        document.querySelector('.language').append(li)
+    }
+    addOptiLanguage("golang") // this is considerd to be a lil bit more optimised way of doing shit
+
+//Edit 
+const secondLang = document.querySelector("li:nth-child(2)") // note this is new
+// secondLang.innerHTML = "Mojo"
+const newli = document.createElement('li')
+newli.textContent = "Mojo"
+secondLang.replaceWith(newli)
+
+// Edit (just another way)
+const firstLang = document.querySelector("li:first-child") // note this is new
+firstLang.outerHTML = '<li>Cpp</li>'
+
+// remove
+const lastLang = document.querySelector("li:last-child")
+lastLang.remove()
+
+</script>
+</html>
