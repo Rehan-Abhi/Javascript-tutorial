@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitesh sir's card</title>
+</head>
+<body style="background-color: #212121; color: #fff;" >
+    
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest()
+    xhr.open('GET', requestUrl)
+    xhr.send()
+    xhr.onreadystatechange = function(){    // note-> this event handler is very important because otherwise till the code will reach the if block, the state might only have reached 1 or 2 and thus the if block will never get executed in that case.
+        if (xhr.readyState==4){
+        const data = JSON.parse(this.responseText)
+        const photoUrl = data.avatar_url
+        const photo = document.createElement('img')
+        photo.src = photoUrl
+        const followers = document.createTextNode(data.followers)
+        
+        const button = document.createElement('button')
+        button.textContent = 'show card'
+        document.body.appendChild(button)
+        button.addEventListener('click', (e)=>{
+            document.body.appendChild(photo)
+            document.body.appendChild(followers)
+            document.body.removeChild(button)
+
+
+        })
+    }
+}
+
+</script>
+</html>
