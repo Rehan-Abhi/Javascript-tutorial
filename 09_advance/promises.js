@@ -89,14 +89,16 @@ consumePromiseFive()
 
 //getAllUsers()
 
-fetch('https://api.github.com/users/hiteshchoudhary')
-.then((response) => {
+fetch('https://api.github.com/users/hiteshchoudhary')    // using fetch
+.then((response) => {                      // note-> fetch ki speacial high priority task queue banti ha (micro task queue), isi liye fetch ka kaam baki kaamo se high priority pe hota ha
     return response.json()
-})                                            // using fetch
+})                                           
 .then((data) => {
     console.log(data);
 })
 .catch((error) => console.log(error))
+
+//fetch can take 2 parameters, in the first one we give the url and in the second one, we can give data like we did in response()
 
 // promise.all
 // yes this is also available, kuch reading aap b kro.
