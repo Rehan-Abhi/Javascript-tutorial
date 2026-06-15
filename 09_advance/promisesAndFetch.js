@@ -98,7 +98,7 @@ fetch('https://api.github.com/users/hiteshchoudhary')    // using fetch
 })
 .catch((error) => console.log(error))
 
-//fetch can take 2 parameters, in the first one we give the url and in the second one, we can give data like we did in response()
+//fetch can take 2 parameters, in the first one we give the url and in the second one, we can give data(object) like we did in response()
 
 // promise.all
 // yes this is also available, kuch reading aap b kro.
