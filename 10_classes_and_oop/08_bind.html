@@ -1,0 +1,32 @@
+<!-- bind is used to preserve the this context. In JavaScript, the value of 'this' isn't tied to the function itself; it's determined by how the function is called. If you extract a method from an object and pass it somewhere else (like a callback or a timer), it "forgets" its original object and this usually becomes undefined (or the global window object). -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <button>Button Clicked</button>
+</body>
+<script>
+    class React {
+        constructor(){
+            this.library = "React"
+            this.server = "https://localhost:300"
+
+            //requirement
+            document
+                .querySelector('button')
+                .addEventListener('click', this.handleClick.bind(this))
+
+        }
+        handleClick(){
+            console.log("button clicked");
+            console.log(this.server);  // here when we call this function by the click event, 'this' actually becomes the button by which this function was called. but because we have used bind, it also has the reference of this(context) of the class binded to it.
+        }
+    }
+
+    const app = new React()
+</script>
+</html>
