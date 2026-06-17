@@ -8,7 +8,7 @@ class User {
     }
 }
 
-class Teacher extends User{                  // this is what we call inheritance. Teacher class inherits the User class
+class Teacher extends User{                  // this is what we call inheritance. Teacher class inherits the User class. this under the hood does that __proto__ and stuff that we learnt in 03_prototype.js
     constructor(username, email, password){
         super(username)      // this keyword under the hood does all that .call and use of 'this' that we learnt in 04_call.js
         this.email = email
