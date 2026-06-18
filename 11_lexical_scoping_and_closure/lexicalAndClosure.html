@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure aur chai</title>
+</head>
+<body style="background-color: #313131;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+
+    <script>     // note-> lexical scoping means that the inner function has access to the scope of outer function.
+    // function init() {
+    //     let name = "Mozilla";           
+    //     function displayName() {  // this is an illustration from mdn to explain lexical scoping. here we are able to access name variable which was present in the parent function.
+    //         console.log(name); 
+    //     }
+    //     displayName();
+    // }
+    // init();
+
+    // function outer(){
+    //     let username = "hitesh"
+    //     console.log("OUTER", secret);  //this will throw error, this shows that we cannot access inner functions scope in the outer one
+
+    //     function inner(){
+    //         let secret = "my123"
+    //         console.log("inner", username); 
+    //     }
+    //     function innerTwo(){
+    //         console.log("innerTwo", username);
+    //         console.log(secret);
+    //     }
+    //     inner()
+    //     innerTwo()
+
+    // }
+    // outer()
+    // console.log("TOO OUTER", username); // this shows that we do not have the access of a function's scope in global env, quite obvious hheheh.
+
+
+    // function makeFunc() {
+    //     const name = "Mozilla";
+    //     function displayName() {
+    //         console.log(name);
+    //     }
+    //     return displayName;
+    // }
+
+    // const myFunc = makeFunc(); 
+    // myFunc(); // This ideally should not work because the functions context only till the function is being executed. once the function is executed, its execution context dies. but as we know from the concept of lexical scoping that inner function has access to outer function's scope, thus when we refer to the inner function, all of the outer function's reference also comes attached to it and we are able to access it. this is called """""CLOSURE""""".
+
+
+    // application of concept of closure -> 
+
+    </script>
+    <script>
+        // document.getElementById("orange").onclick = function(){
+        //     document.body.style.backgroundColor = `orange`
+        //                                                            // we want to perform the function performed by these 4 lines of code in generic way 
+        
+        // document.getElementById("green").onclick = function(){
+        //     document.body.style.backgroundColor = `green`
+        // }
+
+        function clickHandler(color){
+            // document.body.style.backgroundColor = `${color}`
+
+            return function(){
+                document.body.style.backgroundColor = `${color}`
+            }
+        }
+
+        document.getElementById('orange').onclick = clickHandler("orange")
+        document.getElementById('green').onclick = clickHandler("green")
+
+    </script>
+</html>
