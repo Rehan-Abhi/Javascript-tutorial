@@ -5,7 +5,7 @@ function User(email, password){
 
     Object.defineProperty(this, 'email', {
         get: function(){
-            return this._email.toUpperCase() // these are the same propeties as we learnt by using Object.getOwnPropertyDescriptor(user, "email").here we have hard coded the value and writable properties with these functions which means that whenever we try to read or write to theis property, specific getters and setters will be executed.
+            return this._email.toUpperCase() // these are the same propeties as we learnt by using Object.getOwnPropertyDescriptor(user, "email").here we have hard coded the value and writable properties with these functions which means that whenever we try to read or write to this property, specific getters and setters will be executed.
         },
         set: function(value){
             this._email = value
