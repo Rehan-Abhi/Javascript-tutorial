@@ -9,7 +9,9 @@
 // console.log(values);
 
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-// NOTE -> filter ka syntax -> const vairable_name = arr_name.filter(() => (condition))
+// NOTE -> filter ka syntax -> const vairable_name = arr_name.filter((item) => (condition))
+
+// NOTE -> we can also use the second parameter of filter which is index i.e arr.filter((item,index)=>{ return (condition)})
 
 // const newNums = myNums.filter( (num) => {   //NOTE -> filter returns all the values of the array which satisfy the condition
 //     return num > 4
