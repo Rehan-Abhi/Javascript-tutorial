@@ -8,7 +8,7 @@ class User {
         console.log(`Username: ${this.username}`);
     }
 
-    static createId(){ // this property/method now cannot be used by any of its instance or its child
+    static createId(){ // this property/method now cannot be used by any of its instance or its child. it is actually attached to the class itself. i.e it is not added to the classes's prototype so its childs cannot access it, but its added directly to the class object, so class can access it. like, we an do console.log(User.createId()) and it will give us 123
         return `123`
     }
 }
