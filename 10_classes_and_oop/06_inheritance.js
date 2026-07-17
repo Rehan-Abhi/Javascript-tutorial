@@ -27,4 +27,4 @@ const masalaChai = new User("masalaChai")
 
 masalaChai.logMe()
 
-console.log(chai instanceof User);  // by this keyword, we can check if an object is an instance of a class
+console.log(chai instanceof User);  // by this keyword, we can check if an object is an instance of a class. we can also use this for checking instances of a function
