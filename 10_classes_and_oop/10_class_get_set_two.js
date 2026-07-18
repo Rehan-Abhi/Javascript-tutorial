@@ -1,7 +1,7 @@
 // this is the latest syntax of using getters and setters in class.
 class User {
     constructor(email, password){
-        this.email = email;  // now that we have get and set methods for these properties, this constructor won't save the values of email from the user to an email variable. it would rather execute the setter and pass the value of email as value parameter of the setter. when the user tries to read this email, then the get method gets executed. 
+        this.email = email;  // now that we have get and set methods for these properties, this constructor will not be called when we try to get or set these properties, rather their get and set methods will executed in that case.
         this.password = password
     }
 
@@ -21,5 +21,5 @@ class User {
     }
 }
 
-const hitesh = new User("h@hitesh.ai", "abc")
+const hitesh = new User("h@hitesh.ai", "abc") 
 console.log(hitesh.email); // when we try to read this email property, its get method gets executed.
