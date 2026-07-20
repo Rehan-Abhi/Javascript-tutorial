@@ -54,6 +54,8 @@ Teacher.__proto__ = User // this will add all the properties of user in the Teac
 // modern syntax
 Object.setPrototypeOf(TeachingSupport, Teacher)
 
+// NOTE -> this syntax of inheritance of prototypes is for objects. for inheritance of instances of constructor functions, we use Dog.prototype = Object.create(Animal.prototype) where Dog and Animal are the constructor functions.
+
 let anotherUsername = "ChaiAurCode     "
 
 String.prototype.trueLength = function(){
